@@ -1,5 +1,5 @@
 # PSPE
-Source code of EMNLP2020 paper "Pre-training Entity Relation Encoder with Intra-span and Inter-spanInformation".
+Source code of EMNLP2020 paper ["Pre-training Entity Relation Encoder with Intra-span and Inter-spanInformation"](https://www.aclweb.org/anthology/2020.emnlp-main.132.pdf).
 
 ## Requirements
 * `python`: 3.7.6
