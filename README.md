@@ -44,6 +44,13 @@ PYTHONPATH=$(pwd) python examples/attention_entity_relation/att_entity_relation_
 ## Cite
 If you find our code is useful, please cite:
 ```
+@inproceedings{wang2020pre,
+  title={Pre-training Entity Relation Encoder with Intra-span and Inter-span Information},
+  author={Wang, Yijun and Sun, Changzhi and Wu, Yuanbin and Yan, Junchi and Gao, Peng and Xie, Guotong},
+  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages={1692--1705},
+  year={2020}
+}
 ```
 
 
