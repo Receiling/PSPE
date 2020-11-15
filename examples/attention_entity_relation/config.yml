@@ -1,0 +1,66 @@
+# save_config: ckpt/spe_finetune/config.yml
+save_dir: ckpt/spe_finetune
+best_model_path: ckpt/spe_finetune/best_model
+last_model_path: ckpt/spe_finetune/last_model
+pretrained_model_path: pretrained_models/wiki_pretrained_spe
+train_model_dir: ckpt/spe_finetune/batch
+
+vocabulary_file: ckpt/spe_finetune/vocabulary.pickle
+train_file: data/demo/train.json
+dev_file: data/demo/dev.json
+test_file: data/demo/test.json
+max_sent_len: 400
+max_wordpiece_len: 512
+entity_schema: BIEOU
+low_case: 0
+
+embedding_dims: 100
+word_dims: 100
+char_dims: 50
+char_batch_size: 128
+char_kernel_sizes: [2, 3, 4]
+char_output_channels: 25
+embedding_model: bert
+entity_model: pipeline
+lstm_layers: 0
+lstm_hidden_unit_dims: 512
+schedule_k: 3.0
+entity_cnn_kernel_sizes: [2, 3, 4]
+entity_cnn_output_channels: 100
+context_cnn_kernel_sizes: [2, 3, 4]
+context_cnn_output_channels: 100
+ent_output_size: 300
+att_size: 500
+position_embedding_dims: 100
+context_output_size: 300
+ent_mention_output_size: 128
+span_batch_size: 128
+dropout: 0.1
+bert_model_name: bert-base-cased
+bert_output_size: 0
+bert_dropout: 0.1
+
+gradient_clipping: 1.0
+learning_rate: 25e-6
+bert_learning_rate: 25e-6
+lr_decay_rate: 0.90
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1e-6
+adam_weight_decay_rate: 0.01
+
+seed: 5216
+epoches: 200
+pretrain_epoches: 5
+warmup_rate: 0.2
+early_stop: 100
+train_batch_size: 32
+test_batch_size: 32
+gradient_accumulation_steps: 1
+logging_steps: 32
+validate_every: 15000
+device: -1
+root_log_level: DEBUG
+log_file: ckpt/spe_finetune/train.log
+console_log_level: NOTSET
+file_log_level: NOTSET

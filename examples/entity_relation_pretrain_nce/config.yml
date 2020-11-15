@@ -1,0 +1,35 @@
+# save_config: ckpt/default/default.yml
+save_dir: ckpt/wiki_pretrain
+pretrained_model_path: ckpt/wiki_pretrain/pretrained_model
+entity_schema: BIEOU
+low_case: 0
+pretrain_file_list: [data/wiki/wikipedia_pretrain.json]
+
+entity_cnn_kernel_sizes: [2, 3, 4]
+entity_cnn_output_channels: 100
+ent_output_size: 300
+span_batch_size: 128
+position_embedding_dims: 100
+att_size: 500
+dropout: 0.1
+bert_model_name: bert-base-cased
+bert_output_size: 0
+bert_dropout: 0.1
+temperature: 0.2
+queue_size: 4096
+
+gradient_clipping: 1.0
+learning_rate: 1e-4
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1e-6
+adam_weight_decay_rate: 0.01
+
+seed: 5216
+train_batch_size: 16
+gradient_accumulation_steps: 16
+device: -1
+root_log_level: DEBUG
+log_file: ckpt/wiki_pretrain/pretrain.log
+console_log_level: NOTSET
+file_log_level: NOTSET
