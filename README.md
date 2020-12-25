@@ -44,12 +44,23 @@ PYTHONPATH=$(pwd) python examples/attention_entity_relation/att_entity_relation_
 ## Cite
 If you find our code is useful, please cite:
 ```
-@inproceedings{wang2020pre,
-  title={Pre-training Entity Relation Encoder with Intra-span and Inter-span Information},
-  author={Wang, Yijun and Sun, Changzhi and Wu, Yuanbin and Yan, Junchi and Gao, Peng and Xie, Guotong},
-  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  pages={1692--1705},
-  year={2020}
+@inproceedings{wang-etal-2020-pre,
+    title = "Pre-training Entity Relation Encoder with Intra-span and Inter-span Information",
+    author = "Wang, Yijun  and
+      Sun, Changzhi  and
+      Wu, Yuanbin  and
+      Yan, Junchi  and
+      Gao, Peng  and
+      Xie, Guotong",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.132",
+    doi = "10.18653/v1/2020.emnlp-main.132",
+    pages = "1692--1705",
+    abstract = "In this paper, we integrate span-related information into pre-trained encoder for entity relation extraction task. Instead of using general-purpose sentence encoder (e.g., existing universal pre-trained models), we introduce a span encoder and a span pair encoder to the pre-training network, which makes it easier to import intra-span and inter-span information into the pre-trained model. To learn the encoders, we devise three customized pre-training objectives from different perspectives, which target on tokens, spans, and span pairs. In particular, a span encoder is trained to recover a random shuffling of tokens in a span, and a span pair encoder is trained to predict positive pairs that are from the same sentences and negative pairs that are from different sentences using contrastive loss. Experimental results show that the proposed pre-training method outperforms distantly supervised pre-training, and achieves promising performance on two entity relation extraction benchmark datasets (ACE05, SciERC).",
 }
 ```
 
