@@ -333,7 +333,7 @@ class JointREPretrainedModel(nn.Module):
                                                                         1)).view(batch_size, 1)
             s2c_negative_score = torch.mm(
                 span_pair_results['span_mention_repr'].view(batch_size, repr_dims),
-                torch.cat(self.context_pair_queue, dim=0).view(repr_dims, -1))
+                torch.cat(self.context_pair_queue, dim=0).transpose(0, 1).contiguous())
             s2c_logits = torch.cat([s2c_positive_score, s2c_negative_score], dim=1)
 
             c2s_positive_score = torch.bmm(
@@ -342,7 +342,7 @@ class JointREPretrainedModel(nn.Module):
                                                                      1)).view(batch_size, 1)
             c2s_negative_score = torch.mm(
                 context_pair_results['span_mention_repr'].view(batch_size, repr_dims),
-                torch.cat(self.span_pair_queue, dim=0).view(repr_dims, -1))
+                torch.cat(self.span_pair_queue, dim=0).transpose(0, 1).contiguous())
             c2s_logits = torch.cat([c2s_positive_score, c2s_negative_score], dim=1)
 
             labels = torch.zeros(batch_size, dtype=torch.long)
